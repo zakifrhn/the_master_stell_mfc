@@ -29,10 +29,7 @@ This project worker can follow the steps below:
    ```sh
    go run ./cmd/main.go
    ```
-4. Below are comments to run all unit tests
-   ```sh
-   go test -v ./...
-   ```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
