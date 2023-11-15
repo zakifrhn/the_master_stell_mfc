@@ -1,0 +1,34 @@
+
+version: '3.9'
+services:
+  #container 1
+  goback:
+      container_name: godevtest-compose
+      image: itsfarhanz/godevtest  
+      ports:
+        - '9092:8590'
+      networks:
+        - bridge-db-app
+      environment:
+        DB_HOST: '172.18.0.2' 
+        DB_NAME: 'go_test_hiring'
+        DB_USER: 'postgres' 
+        DB_PASS: 'Fazztrak2023' 
+        DB_PORT: '5432'
+
+  #container 2    
+  database:
+    container_name: devtest-db-compose  
+    image: postgres:alpine3.18
+    ports:
+      - '5460:5432'
+    networks:
+      - bridge-db-app
+    environment:
+      POSTGRES_USER: 'postgres' 
+      POSTGRES_PASSWORD: 'Fazztrak2023' 
+      POSTGRES_DB: 'go_test_hiring'
+
+networks:
+  bridge-db-app:
+    external: true

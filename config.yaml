@@ -1,0 +1,10 @@
+
+jwt:
+  secret: "test123"
+database:
+  host: "localhost"
+  port: 5432
+  user: "postgres"
+  name: "go_test_hiring"
+  pass: "Fazztrak2023"
+port : 8590
