@@ -38,3 +38,9 @@ func main() {
 	}
 
 }
+
+//?create table
+//migrate -path ./migrations -database "postgresql://postgres:Fazztrak2023@localhost/go_test_hiring?port=5432&sslmode=disable&search_path=public" -verbose up
+
+//?delete table
+//migrate -path ./migrations -database "postgresql://postgres:Fazztrak2023@localhost/go_test_hiring?port=5432&sslmode=disable&search_path=public" -verbose down

@@ -4,7 +4,7 @@ services:
   #container 1
   goback:
       container_name: godevtest-compose
-      image: itsfarhanz/godevtest  
+      image: itsfarhanz/gotests  
       ports:
         - '9092:8590'
       networks:
@@ -18,10 +18,10 @@ services:
 
   #container 2    
   database:
-    container_name: devtest-db-compose  
+    container_name: db-test-hiring
     image: postgres:alpine3.18
     ports:
-      - '5460:5432'
+      - '5470:5432'
     networks:
       - bridge-db-app
     environment:
